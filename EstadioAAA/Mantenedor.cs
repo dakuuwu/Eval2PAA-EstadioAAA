@@ -164,11 +164,17 @@ namespace EstadioAAA
             return num;
         }
         //metodo temporal para inicializar campos de datos
+        enum usernames
+        {
+            Alex, Alexander, Cristian, Bastian, Luna, Joaquin,
+            Diego, Benjamin, Alfredo, Sebastian, Artemisa, Selene, Nyx, Javiera, Selma
+        }
+        
         public void InicializarCampos(List<Usuario> usrlist, List<Evento> evtlist)
         {
-            string[] usernames = {"Alex", "Alexander", "Cristian", "Bastian", "Luna", "Joaquin", "Diego", "Benjamin", "Alfredo", "Sebastian", "Artemisa", "Selene", "Nyx", "Javiera", "Selma"};
+            string[] usernames = Enum.GetNames(typeof(usernames));
             string[] rut = { "69696969-1", "69696969-2", "69696969-3", "69696969-4", "19363100-2", "69696969-5", "69696969-6", "69696969-7", "69696969-8", "69696969-9", "69696969-0", "69696969-K", "69696969-10", "69696969-11", "69696969-12" };
-            for (int i=0; i<usernames.Length-1; i++)
+            for (int i=0; i <= Enum.GetNames(typeof(usernames)).Length -1; i++)
             {
                 Usuario usr = new Usuario();
                 usr.Username = usernames[i];
