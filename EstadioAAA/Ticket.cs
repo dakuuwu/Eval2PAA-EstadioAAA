@@ -6,16 +6,16 @@ namespace EstadioAAA
 {
     class Ticket
     {
-        private string _uid, _rutCliente, _codEvento;
+        private string _uuid, _rutCliente, _codEvento;
 
-        public Ticket(string uid, string rutCliente, string codEvento)
+        public Ticket(string uuid, string rutCliente, string codEvento)
         {
-            _uid = uid;
+            _uuid = uuid;
             _rutCliente = rutCliente;
             _codEvento = codEvento;
         }
 
-        public string UID { get => _uid; set => _uid = value; }
+        public string UUID { get => _uuid; set => _uuid = value; }
         public string RUTCliente { get => _rutCliente; set => _rutCliente = value; }
         public string CodEvento { get => _codEvento; set => _codEvento = value; }
     }
